@@ -49,5 +49,5 @@ cancer.ucsf.edu
 GEO RNA-seq panel (AML ± DAC) for convenient HL-60 selection (GSE222822). 
 0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk
 
-If you want, I can also drop in a ready-to-push README.md, Clean.sh, Differential_expression.sh, and minimal R scripts (Salmon→tximport/tximeta→DESeq2) that mirror this description.
+
 
