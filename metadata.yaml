@@ -1,0 +1,35 @@
+data_source:
+  geo_series_primary: "GSE222886"
+  geo_series_alternative: "GSE222822"
+  description: "RNA-seq of HL-60 and other AML cell lines ± decitabine (DAC). Use two DAC and two DMSO HL-60 runs."
+  how_to_fetch: "Use SRA Run Selector from the GEO page to export SRR accessions; scripts support SRA Toolkit or direct FASTQ URLs."
+
+paper_reference:
+  citation: "Ge AY, Arab A, et al. A multiomics approach reveals RNA dynamics promote cellular sensitivity to DNA hypomethylation. Scientific Reports (2024)."
+  doi: "10.1038/s41598-024-77314-9"
+
+tools:
+  - name: "Salmon"
+    url: "https://salmon.readthedocs.io/"
+  - name: "tximport (Bioconductor)"
+    url: "https://bioconductor.org/packages/tximport/"
+  - name: "DESeq2 (Bioconductor)"
+    url: "https://bioconductor.org/packages/DESeq2/"
+  - name: "SRA Toolkit"
+    url: "https://github.com/ncbi/sra-tools"
+  - name: "seqtk"
+    url: "https://github.com/lh3/seqtk"
+  - name: "fastp (optional)"
+    url: "https://github.com/OpenGene/fastp"
+
+reference:
+  organism: "Homo sapiens"
+  provider: "GENCODE"
+  gencode_release: "v41"
+  genome: "GRCh38"
+  notes: "Scripts download the specified GENCODE release for indexing."
+
+runtime_targets:
+  max_input_size_gb: 10
+  max_runtime_minutes: 60
+  notes: "Use 50,000 pairs per sample for speed and size; adjust if needed."

@@ -1,0 +1,29 @@
+task: >
+  You have been given bulk RNA-seq FASTQs from HL-60 cells (Homo sapiens) treated with decitabine (DAC) vs DMSO.
+  Using the provided FastQs and the workflow (Salmon → tximport → DESeq2), answer the following.
+
+questions:
+  - id: q1
+    stage: subsampling_qc
+    text: "How many fragments does Salmon report as 'num_processed' for sample DMSO_rep1? (After subsampling to 50,000 paired fragments.)"
+    answer_type: integer_exact
+
+  - id: q2
+    stage: quantification
+    text: "How many genes have non-zero counts in at least one sample after tximport summarization?"
+    answer_type: integer_exact
+
+  - id: q3
+    stage: differential_expression
+    text: "How many genes are significantly upregulated in DAC vs DMSO at FDR < 0.1 and |log2FC| >= 1?"
+    answer_type: integer_exact
+
+  - id: q4
+    stage: differential_expression
+    text: "Provide the ordered list (highest to lowest) of the top 3 upregulated genes by log2 fold-change (DAC vs DMSO), breaking ties by adjusted p-value."
+    answer_type: ordered_list
+
+  - id: q5
+    stage: differential_expression
+    text: "Provide the unordered set of the top 5 downregulated genes by log2 fold-change (DAC vs DMSO)."
+    answer_type: set_unordered
