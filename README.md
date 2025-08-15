@@ -1,4 +1,4 @@
-# HL60 Decitabine RNA-seq (Salmon + tximport + DESeq2) — Taiga Task
+# HL60 Decitabine RNA-seq (Salmon + tximport + DESeq2)
 
 **Paper**: Ge AY, Arab A, et al. *A multiomics approach reveals RNA dynamics promote cellular sensitivity to DNA hypomethylation*. Scientific Reports (2024). doi:10.1038/s41598-024-77314-9
 
